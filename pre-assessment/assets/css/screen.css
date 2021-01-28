@@ -1,13 +1,15 @@
-/* Colors 
-
-#353D4D	Dark grey/blue */
-
-
-
 * {								/* universal selector that can be used to select any and all types of elements in an HTML page */
 	margin: 0px;
 	padding: 0px;
 }
+
+.img-right{
+  float:right;
+  padding:5px;
+  border:1px solid #A6A8AB;
+  margin: 0 0 10px 20px;
+}
+
 body {
 	text-align: center;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -62,7 +64,8 @@ body {
 	border-bottom-color: #000;
 	color: #93ABD5;
 }
-#nav ul li a:hover {
+#nav ul li a:hover, #nav ul li a:active {
+	text-decoration: none;
 	border-bottom-width: 3px;
 	border-bottom-style: solid;
 	border-bottom-color: #CCC;
@@ -96,12 +99,11 @@ body {
 	margin-bottom: 15px;
 }
 
-
 #footer {
 	background-color: #000;
 	color: #FFF;
-	height: 25px;
 }
+
 #footer h6 {
 	width: 80vw;	
   	margin: auto;
@@ -150,4 +152,19 @@ body {
 
 .text-blue{
   color: #6F6CFF;
+}
+
+#colorchange{
+	font-weight: bold;
+}
+
+#colorchange a:link, #colorchange a:visited {
+	text-decoration: none;
+	color: #353D4D;
+}
+
+#colorchange a:hover, #colorchange a:active {
+	color: #F2150A;
+	background: #64CC3B;
+	transition:.5s;
 }
