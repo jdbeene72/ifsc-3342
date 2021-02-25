@@ -34,26 +34,45 @@ html {
   clear: both;
 }
 
+
+/* target width = 956*/
 .container{
-  width: 956px;
-  background: url("../img/grid.png");
-  border: 1px solid #000;
+  /*width: 956px;*/
+  /*background: url("../img/grid.png");*/
+  /*border: 1px solid #000;*/
   margin: 20px auto;
 }
 
-header.primary{
+header.primary{                /* 12 COLUMNS*/
+  width: 95.816%;
+  background: rgba(79, 99, 245, 1.0);
+  margin: 2.092%;
+  padding: 2.092%;
+  float: left;
 }
 
-#content{
-  background: yellow;
+#content{                      /* 8 COLUMNS*/
+  width: 63.18%;
+  background: rgba(73, 78, 117, 1.0);
+  margin-left: 2.092%;
+  padding: 2.092%;
+  float: left;
 }
 
-aside {
-  background: purple;
+aside {                        /* 4 COLUMNS*/
+  width: 30.544%;
+  background: rgba(62, 77, 194, 1.0);
+  margin-left: 2.092%;
+  padding: 2.092%;
+  float: left;
 }
 
-footer.primary {
-
+footer.primary {                /* 12 COLUMNS*/
+  width: 95.816%;
+  background: rgba(38, 47, 117, 1.0);
+  margin: 2.092%;
+  padding: 2.092%;
+  float: left;
 }
 
 /*GUTTER WIDTH: 20px
@@ -61,7 +80,7 @@ footer.primary {
 
 .col-2 {
   width: 136px;
-  background: blue;
+  /*width: 14.226%;*/
   margin-left: 20px;
   padding: 20px;
   float: left;
@@ -69,7 +88,7 @@ footer.primary {
 
 .col-4 {
   width: 292px;
-  background: green;
+  /*width: 30.544%;*/
   margin-left: 20px;
   padding: 20px;
   float: left;
@@ -77,7 +96,7 @@ footer.primary {
 
 .col-6 {
   width: 448px;
-  background: purple;
+  /*width: 46.862%;*/
   margin-left: 20px;
   padding: 20px;
   float: left;
@@ -85,7 +104,7 @@ footer.primary {
 
 .col-8 {
   width: 604px;
-  background: blue;
+  /*width: 63.18%;*/
   margin-left: 20px;
   padding: 20px;
   float: left;
@@ -93,8 +112,8 @@ footer.primary {
 
 .col-12 {
   width: 916px;
-  background: red;
-  margin: 20px;
+  /*width: 95.816%;*/
+  margin-left: 20px;
   padding: 20px;
   float: left;
 }
