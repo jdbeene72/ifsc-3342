@@ -2,7 +2,6 @@
 
 html {
   box-sizing: border-box;
-  background-color: #000000;
 }
 *,
 *:before,
@@ -13,7 +12,6 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #ffffff;
 }
 
 img {
@@ -40,14 +38,15 @@ img {
 }
 
 body {
-  background: #efefef;
-  color: #222222;
+  /*background: #212121;*/
+  background: #181818;
+  color: #ffffff;
   line-height: 1.6;
 }
 
 a:link,
 a:visited {
-  color: #222;
+  color: #ffffff;
 }
 
 .container {
@@ -65,20 +64,19 @@ nav.primary {
 
 nav a:link,
 nav a:visited {
-  border: 1px solid #000;
+  border: 1px solid #3d3d3d;
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
-  color: #222222;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 0.75em;
   background: rgba(0, 0, 0, 0.65);
   transition: background-color 0.5s ease;
-  color: #fff;
 }
 
 nav a:hover {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 main {
@@ -142,16 +140,15 @@ dd {
 }
 
 .related-links a {
-  border: 1px solid #000;
+  border: 1px solid #3d3d3d;
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
-  color: #222222;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 0.75em;
   background: rgba(0, 0, 0, 0.65);
   transition: background-color 0.5s ease;
-  color: #fff;
 }
 
 .related-links .svg-inline--fa {
