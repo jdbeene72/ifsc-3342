@@ -1,9 +1,5 @@
 /* RESUME ASSIGNMENT */
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
   box-sizing: border-box;
 }
@@ -13,200 +9,263 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+/* ------ Typography -------*/
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
-.cf {
-  zoom: 1;
-}
-.cf::before,
-.cf::after {
-  content: "";
-  display: table;
-}
-.cf::after {
-  clear: both;
+/*------- Fluid Images ------*/
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-
-/* target width = 956*/
-.container{
-  margin: 20px auto;
+/* ------ Design Time Styles -------*/
+.container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-header.primary{                /* 12 COLUMNS*/
-  width: 95.816%;
-  background: rgba(79, 99, 245, 1.0);
-  margin: 2.092%;
-  padding: 2.092%;
-  float: left;
+/* ------ Helper Classes -------*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
 }
 
-#content{                      /* 8 COLUMNS*/
-  width: 63.18%;
-  background: rgba(73, 78, 117, 1.0);
-  margin-left: 2.092%;
-  padding: 2.092%;
-  float: left;
+/* ------ Global Styles -------*/
+
+body {
+  background: #efefef;
+  color: #222222;
+  line-height: 1.6;
 }
 
-aside {                        /* 4 COLUMNS*/
-  width: 30.544%;
-  background: rgba(62, 77, 194, 1.0);
-  margin-left: 2.092%;
-  padding: 2.092%;
-  float: left;
+a:link,
+a:visited {
+  color: #222;
 }
 
-footer.primary {                /* 12 COLUMNS*/
-  width: 95.816%;
-  background: rgba(38, 47, 117, 1.0);
-  margin: 2.092%;
-  padding: 2.092%;
-  float: left;
+.container {
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.15);
 }
 
-/*GUTTER WIDTH: 20px
-  COLUMN WIDTH: 58px */
-
-.col-2 {
-  width: 136px;
-  /*width: 14.226%;*/
-  margin-left: 20px;
-  padding: 20px;
-  float: left;
+nav.primary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* --- Using Repeat Keyword ---*/
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 20px 0px 20px;
 }
 
-.col-4 {
-  width: 292px;
-  /*width: 30.544%;*/
-  margin-left: 20px;
-  padding: 20px;
-  float: left;
+nav a:link,
+nav a:visited {
+  border: 1px solid #000;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(0, 0, 0, 0.65);
+  transition: background-color 0.5s ease;
+  color: #fff;
 }
 
-.col-6 {
-  width: 448px;
-  /*width: 46.862%;*/
-  margin-left: 20px;
-  padding: 20px;
-  float: left;
+nav a:hover {
+  background: rgba(0, 0, 0, 0.95);
 }
 
-.col-8 {
-  width: 604px;
-  /*width: 63.18%;*/
-  margin-left: 20px;
-  padding: 20px;
-  float: left;
+main {
+  padding: 1px 20px;
 }
 
-.col-12 {
-  width: 916px;
-  /*width: 95.816%;*/
-  margin-left: 20px;
-  padding: 20px;
-  float: left;
+main h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+main h1:before,
+main h1:after {
+  background-color: #222;
+  content: "\a0";
+  flex-grow: 1;
+  height: 1px;
+  position: relative;
+  top: 0.77em;
+}
+main h1:before {
+  margin-right: 10px;
+}
+main h1:after {
+  margin-left: 10px;
+}
+
+p[itemprop="description"] {
+  font-size: 0.8em;
+}
+
+dl {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 8em 1fr;
+  /* Shorthand */
+  grid-template: auto / 8em 1fr;
+}
+
+dt {
+  font-weight: 800;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+  grid-column: 1;
+}
+
+dd {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+  grid-column: 2;
+}
+
+.related-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.related-links a {
+  border: 1px solid #000;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(0, 0, 0, 0.65);
+  transition: background-color 0.5s ease;
+  color: #fff;
+}
+
+.related-links .svg-inline--fa {
+  font-size: 1.8em;
+  padding-top: 7px;
+}
+
+.related-links a:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.related-links li {
+  margin-right: 20px;
+}
+
+.job,
+.certificate {
+  border-bottom: 1px solid #999;
+  padding-bottom: 20px;
+}
+
+.job *[itemprop="jobTitle"],
+.job *[itemprop="name"],
+.job *[itemprop="url"],
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"] {
+  display: block;
+}
+
+.job h3 {
+  margin: 20px 0 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Reorder Source Using Grid */
+
+main.container{
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education"
+    "experience"
+    "skills";
+}
+
+.page-title{
+  grid-area: title;
+}
+#about{
+  grid-area: about;
+}
+#skills{
+  grid-area: skills;
+
+}
+#experience{
+  grid-area: experience;
+}
+#education{
+  grid-area: education;
 }
 
 
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+/*----------------------Tablet Breakpoint-----------------------*/
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+@media screen and (min-width:768px){
+  
+main.container {
+    max-width:900px;
+    grid-template-columns: 36.5% auto;
+    grid-template-areas:
+      "title title"
+      "about about"
+      "skills experience"
+      ". education";
   }
-
-  a,
-  a:visited {
-    text-decoration: underline;
+  header.container{
+    max-width:900px;
+  }  
+  
+  /* Nested Grid Example */
+  #about{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: 300px 1fr auto;
+    grid-template-areas:
+      "bio details details"
+      "related related related"
   }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+  
+.bio{
+  grid-area:bio;
+}
+.details{
+  grid-area:details;
+}
+  
+.related-links{
+  grid-area:related;
+  border-bottom:1px solid #999;
+  padding-bottom:50px
+}
+  
 }
 
 
@@ -222,4 +281,9 @@ footer.primary {                /* 12 COLUMNS*/
 
 
 
+/*----------------------Edge Case Tweaks-----------------------*/
 
+@media only screen and (max-width: 460px) {
+  .related-links li a svg{display:none;}
+  
+}
